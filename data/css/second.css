@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content {
+    margin: 20px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    /* Hier heb ik de breedte aangepast */
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.text-block {
+    margin-top: 10px;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.login-register a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+main {
+    flex: 1;
+}
+
+.main-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* ... Your existing CSS ... */
+
+.featured-properties {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    float: right;
+    margin-right: 10px;
+}
+
+.property {
+    text-align: center;
+}
+
+.property::after {
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.line {
+    width: 100%;
+    border-top: 3px solid black;
+    margin-top: 437px;
+}
+
+.property img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+    margin-right: 10px;
+    /* Voeg hier de gewenste rechtermarge toe */
+}
+
+.contact-form {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    float: right;
+    /* Hier heb ik de breedte aangepast */
+}
+
+.contact-form h3 {
+    font-size: 18px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 5px 0;
+    }
+    .logo img {
+        max-height: 40px;
+    }
+    .login-register {
+        display: none;
+    }
+}
+
+
+/* Mobile styles (up to 480px) */
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
+    }
+    .logo img {
+        max-height: 30px;
+    }
+    main {
+        padding: 10px;
+    }
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-image {
+        margin-right: 0;
+    }
+    .search-bar {
+        padding: 10px;
+    }
+    .search-bar input {
+        padding: 8px;
+    }
+    .featured-properties {
+        flex-direction: column;
+        align-items: center;
+    }
+    .property {
+        margin: 5px 0;
+    }
+    footer {
+        padding: 5px 0;
+    }
+}

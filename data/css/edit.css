@@ -1,0 +1,24 @@
+.liggingGroup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    gap: 10px;
+    padding: 15px;
+}
+.liggingGroup > button {
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    padding: 5px 25px;
+    background: steelblue;
+    color: white;
+    font-size: 18px;
+    transition: all 0.25s ease;
+}
+.liggingGroup > button:hover {
+    cursor: pointer;
+    background: royalblue;
+    transition: all 0.25s ease;
+}

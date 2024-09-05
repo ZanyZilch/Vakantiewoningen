@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+header {
+	position: relative;
+	height: fit-content;
+	width: 100vw;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.title {
+	font-family: "Sacramento", cursive;
+	font-size: 50px !important;
+}
+.title:hover {
+	animation: title 2s forwards;
+	animation-iteration-count: 1;
+}
+@keyframes title {
+	0% {
+		background: linear-gradient(to right, cyan, darkblue);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-size: 200% 100%;
+		background-position: -100% 0;
+	}
+	100% {
+		background: linear-gradient(to right, cyan, darkblue);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-size: 200% 100%;
+		background-position: 100% 0;
+	}
+}
+.items {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	padding: 50px;
+}
+.items > a,
+.items > ul > a {
+	position: relative;
+	z-index: 1;
+	font-size: 20px;
+	font-weight: bold;
+}
+.items > ul {
+	display: inline-block;
+}
+.items > ul > a {
+	transition: all 0.4s ease;
+}
+.items > ul > a:not(:first-child) {
+	margin-left: 25px;
+}
+.items > ul > a:hover {
+	cursor: pointer;
+	color: royalblue;
+	transition: all 0.4s ease;
+}
+.topright {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	height: 700px;
+	width: 700px;
+}
+
+
+.house {
+    clear: both; /* Zorgt ervoor dat de huizen onder de filters worden geplaatst */
+    border: 1px solid #ccc;
+    display: flex;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.left, .right {
+    padding: 10px; 
+}
+
+.left {
+    border-right: 1px solid #ccc; 
+}
+
+.right {
+    flex: 1; 
+}
+
+.houseimage {
+    width: 200px; 
+    height: 150px; 
+}
+
+.check {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.HuisImages img {
+    margin-right: 10px; 
+}
+button[name=generate_pdf] {
+	border: 0;
+	outline: 0;
+	padding: 5px 45px;
+	background: rgb(145, 187, 226);
+	color: white;
+	font-size: 18px;
+	border-radius: 10px;
+	transition: all 0.25s ease;
+}
+button[name=generate_pdf]:hover {
+	cursor: pointer;
+	background: royalblue;
+	transition: all 0.25s ease;
+}
+
+/* Filters */
+.filters {
+    float: left;
+    width: 20%; /* Pas de breedte aan naar jouw voorkeur */
+    padding: 10px;
+}
+
+.container {
+    float: left;
+    width: 80%; /* Pas de breedte aan naar jouw voorkeur */
+}
+
+.filters h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.filters label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.filters input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.filters button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.filters button:hover {
+    background-color: #0056b3;
+}
+
+/* Reset knop */
+.filters button[type="reset"] {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    margin-top: 10px; 
+}
+
+.filters button[type="reset"]:hover {
+    background-color: #FF4500; 
+}

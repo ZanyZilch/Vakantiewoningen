@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 50px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.login-register a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+main {
+    flex: 1;
+}
+
+.main-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-bar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured-properties {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    float: right;
+}
+
+.property {
+    text-align: center;
+}
+
+.property img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Aanpassingen voor de derde pagina */
+
+.filter-results {
+    margin: 20px;
+    text-align: center;
+}
+
+.result-title {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.result-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.result-item {
+    width: calc(25% - 10px);
+    margin-bottom: 20px;
+}
+
+.result-item img {
+    width: 100%;
+    border: 1px solid #ccc;
+    max-height: 150px;
+}
+
+.result-item .text {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .result-items {
+        flex-direction: column;
+    }
+    .result-item {
+        width: 100%;
+    }
+    header {
+        padding: 5px 0;
+    }
+    .logo img {
+        max-height: 40px;
+    }
+    .login-register {
+        display: none;
+    }
+}
+
+
+/* Mobiele stijlen (tot 480px) */
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
+    }
+    .logo img {
+        max-height: 30px;
+    }
+    main {
+        padding: 10px;
+    }
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-image {
+        margin-right: 0;
+    }
+    .search-bar {
+        padding: 10px;
+    }
+    .search-bar input {
+        padding: 8px;
+    }
+    .featured-properties {
+        flex-direction: column;
+        align-items: center;
+    }
+    .property {
+        margin: 5px 0;
+    }
+    .result-item {
+        width: 100%;
+    }
+    footer {
+        padding: 5px 0;
+    }
+}

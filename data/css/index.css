@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+header {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.title {
+	font-family: "Sacramento", cursive;
+	font-size: 50px !important;
+}
+.title:hover {
+	animation: title 2s forwards;
+	animation-iteration-count: 1;
+}
+@keyframes title {
+	0% {
+		background: linear-gradient(to right, cyan, darkblue);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-size: 200% 100%;
+		background-position: -100% 0;
+	}
+	100% {
+		background: linear-gradient(to right, cyan, darkblue);
+		-webkit-background-clip: text;
+		color: transparent;
+		background-size: 200% 100%;
+		background-position: 100% 0;
+	}
+}
+.items {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	padding: 50px;
+}
+.items > a,
+.items > ul > a {
+	position: relative;
+	z-index: 1;
+	font-size: 20px;
+	font-weight: bold;
+}
+.items > ul {
+	display: inline-block;
+}
+.items > ul > a {
+	transition: all 0.4s ease;
+
+}
+.items > ul > a:not(:first-child) {
+	margin-left: 25px;
+}
+.items > ul > a:hover {
+	cursor: pointer;
+	color: royalblue;
+	transition: all 0.4s ease;
+}
+.topright {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	height: 700px;
+	width: 700px;
+}
+.viewport {
+	position: absolute;
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+}
+
+.search-box {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.search-box h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.search-box form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    padding: 10px;
+    border: 2px solid dodgerblue;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.search-box button {
+    background: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.4s ease;
+}
+
+.search-box button:hover {
+    background: royalblue;
+}
+
+.right {
+	position: relative;
+	height: 100%;
+	width: 50vw;
+	order: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-content: center;
+	align-items: center;
+}
+.right > img {
+	position: absolute;
+	height: 500px;
+	aspect-ratio: 1;
+	margin-right: calc(100% - 90%);
+}
+.left {
+	position: relative;
+	height: 100%;
+	width: 50vw;
+	order: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	text-align: left;
+	align-content: center;
+	flex-wrap: wrap;
+	margin-top: -2vh;
+	margin-left: 10vw;
+}
+.left > p {
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: calc(22px + 1vw);
+}
+.left > span {
+	margin-top: 10px;
+	font-size: calc(5px + 1vw);
+}
+.left > div {
+	display: flex;
+	gap: 20px;
+}
+.left > div > a {
+	border: 0;
+	outline: 0;
+	padding: 10px 15px;
+	margin-top: 15px;
+	border-radius: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.left > div > a:nth-of-type(1):hover {
+	cursor: pointer;
+	background: royalblue;
+	transition: all 0.4s ease;
+}
+.left > div > a:nth-of-type(1) {
+	background: dodgerblue;
+	color: white;
+	transition: all 0.4s ease;
+}
+.left > div > a:nth-of-type(2):hover {
+	cursor: pointer;
+	border: 2px solid royalblue;
+	color: royalblue;
+	transition: all 0.4s ease;
+}
+.left > div > a:nth-of-type(2) {
+	background: white;
+	color: dodgerblue;
+	border: 2px solid dodgerblue;
+	transition: all 0.4s ease;
+}
+.container {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+}
+.first {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 25px;
+}
+.first > p {
+	font-weight: bold;
+	font-size: 22px;
+}
+.first > span {
+	margin-top: 15px;
+	text-align: center;
+	max-width: 40%;
+}
+.second {
+	position: relative;
+	height: fit-content;
+	width: 100vw;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	gap: 5vw;
+}
+.second > .item {
+	background: linear-gradient(to bottom, dodgerblue, white);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: center;
+	align-items: center;
+	padding: 15px;
+	height: 400px;
+	width: 300px;
+}
+.item > .icon {
+	font-size: calc(20px + 1vw);
+	color: dodgerblue;
+	background: white;
+	box-shadow: 0 0 15px white;
+	padding: 10px;
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+}
+.item > p {
+	color: white;
+	font-weight: bold;
+	margin-top: 40px;
+	font-size: 18px;
+}
+.item > span {
+	color: white;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: lighter;
+}
+.login {
+	width: 100%;
+}
+.login-container {
+	width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h3 {
+    color: #333;
+}
+
+.login-form {
+    text-align: center;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.register-link {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
